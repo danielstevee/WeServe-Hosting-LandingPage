@@ -7,7 +7,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-blue-400: oklch(70.7% 0.165 254.624);
     --color-indigo-200: oklch(87% 0.065 274.039);
     --color-indigo-500: oklch(58.5% 0.233 277.117);
     --color-indigo-700: oklch(45.7% 0.24 277.023);
@@ -208,9 +207,6 @@
   .mx-auto {
     margin-inline: auto;
   }
-  .mt-2 {
-    margin-top: calc(var(--spacing) * 2);
-  }
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
@@ -223,9 +219,6 @@
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
   }
-  .mb-2 {
-    margin-bottom: calc(var(--spacing) * 2);
-  }
   .mb-7 {
     margin-bottom: calc(var(--spacing) * 7);
   }
@@ -237,9 +230,6 @@
   }
   .grid {
     display: grid;
-  }
-  .table {
-    display: table;
   }
   .h-2 {
     height: calc(var(--spacing) * 2);
@@ -274,14 +264,8 @@
   .max-w-\[450px\] {
     max-width: 450px;
   }
-  .flex-grow {
-    flex-grow: 1;
-  }
   .grow {
     flex-grow: 1;
-  }
-  .border-collapse {
-    border-collapse: collapse;
   }
   .translate-y-\[-2px\] {
     --tw-translate-y: -2px;
@@ -305,9 +289,6 @@
   .cursor-pointer {
     cursor: pointer;
   }
-  .resize {
-    resize: both;
-  }
   .list-none {
     list-style-type: none;
   }
@@ -316,6 +297,9 @@
   }
   .grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -411,20 +395,11 @@
   .border-violet-700 {
     border-color: var(--color-violet-700);
   }
-  .bg-\[\#00009a\] {
-    background-color: #00009a;
-  }
-  .bg-\[\#9a0000\] {
-    background-color: #9a0000;
-  }
   .bg-\[\#640EF1\] {
     background-color: #640EF1;
   }
   .bg-\[\#F1F4F5\] {
     background-color: #F1F4F5;
-  }
-  .bg-\[\#F4F4F6\] {
-    background-color: #F4F4F6;
   }
   .bg-indigo-950 {
     background-color: var(--color-indigo-950);
@@ -492,10 +467,6 @@
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
   }
-  .text-xs {
-    font-size: var(--text-xs);
-    line-height: var(--tw-leading, var(--text-xs--line-height));
-  }
   .text-\[70px\] {
     font-size: 70px;
   }
@@ -528,34 +499,14 @@
   .text-\[\#640EF1\] {
     color: #640EF1;
   }
-  .text-indigo-200 {
-    color: var(--color-indigo-200);
-  }
-  .text-indigo-500 {
-    color: var(--color-indigo-500);
-  }
-  .text-indigo-700 {
-    color: var(--color-indigo-700);
-  }
   .text-indigo-950 {
     color: var(--color-indigo-950);
   }
   .text-white {
     color: var(--color-white);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .opacity-0 {
     opacity: 0%;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
-  .outline-1 {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .transition-all {
     transition-property: all;
@@ -574,10 +525,6 @@
   .ease-in-out {
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
-  }
-  .outline-none {
-    --tw-outline-style: none;
-    outline-style: none;
   }
   .group-open\:translate-y-\[2px\] {
     &:is(:where(.group):is([open], :popover-open, :open) *) {
@@ -598,11 +545,6 @@
   .group-open\:bg-\[\#080C2E\] {
     &:is(:where(.group):is([open], :popover-open, :open) *) {
       background-color: #080C2E;
-    }
-  }
-  .group-open\:text-white {
-    &:is(:where(.group):is([open], :popover-open, :open) *) {
-      color: var(--color-white);
     }
   }
   .group-hover\:pointer-events-auto {
@@ -729,20 +671,6 @@
       content: var(--tw-content);
     }
   }
-  .after\:content-\[\'▼\'\] {
-    &::after {
-      --tw-content: '▼';
-      content: var(--tw-content);
-    }
-  }
-  .group-open\:after\:rotate-180 {
-    &:is(:where(.group):is([open], :popover-open, :open) *) {
-      &::after {
-        content: var(--tw-content);
-        rotate: 180deg;
-      }
-    }
-  }
   .hover\:-translate-y-4 {
     &:hover {
       @media (hover: hover) {
@@ -755,13 +683,6 @@
     &:hover {
       @media (hover: hover) {
         border-color: var(--color-violet-200);
-      }
-    }
-  }
-  .hover\:border-white {
-    &:hover {
-      @media (hover: hover) {
-        border-color: var(--color-white);
       }
     }
   }
@@ -783,13 +704,6 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-violet-700);
-      }
-    }
-  }
-  .hover\:bg-violet-900 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-violet-900);
       }
     }
   }
@@ -908,11 +822,6 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-duration {
   syntax: "*";
   inherits: false;
@@ -1008,7 +917,6 @@
       --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-ease: initial;
       --tw-content: "";
