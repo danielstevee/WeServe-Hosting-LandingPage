@@ -649,6 +649,20 @@
       }
     }
   }
+  .group-hover\:text-\[\#8D90A8\] {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: #8D90A8;
+      }
+    }
+  }
+  .group-hover\:text-\[\#FFD15A\] {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: #FFD15A;
+      }
+    }
+  }
   .group-hover\:text-indigo-950 {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
